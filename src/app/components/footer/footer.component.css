@@ -1,0 +1,23 @@
+#footer{
+    position: relative;
+    bottom: 0;
+    background-color:antiquewhite;
+    text-align: center;
+    width: 100%;
+    padding: 3% 15% 1%;
+  }
+  
+  #footer a{
+    font-size: 30px;
+    margin: 0px 20px;
+    color: black;
+  }
+  
+  #footer p{
+    color: #8f8f8f;
+    font-size: 0.7rem;
+    margin-top: 20px;
+    
+  }
+
+  
