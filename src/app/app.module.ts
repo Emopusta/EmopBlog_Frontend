@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { AddBlogComponent } from './components/add-blog/add-blog.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './components/home/home.component';
     NavbarComponent,
     FooterComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AddBlogComponent
   ],
   imports: [
     BrowserModule,

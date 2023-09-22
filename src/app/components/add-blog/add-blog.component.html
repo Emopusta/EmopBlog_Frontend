@@ -1,0 +1,66 @@
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <h2>Blog Ekle</h2>
+      <p class="lead">Blog ekleme arayüzüne hoş geldiniz.</p>
+    </div>
+
+    <div class="row g-5">
+      <h4 class="mb-3">Blog Detayları</h4>
+      <form [formGroup]="blogForm" class="needs-validation" novalidate="">
+        <div class="row g-3">
+          <div class="col-sm-12">
+            <label class="form-label">Blog Adı</label>
+            <input
+              formControlName="blogName"
+              type="text"
+              class="form-control blogName"
+              id="blogName"
+              placeholder=""
+              value=""
+              required=""
+            />
+            <div class="invalid-feedback">Valid first name is required.</div>
+          </div>
+
+          <div class="col-12">
+            <label for="blogDescription" class="form-label"
+              >Blog Açıklaması</label
+            >
+            <textarea
+              type="text"
+              class="form-control"
+              id="blogDescription"
+              placeholder=""
+              value=""
+              required=""
+              formControlName="blogDescription"
+            ></textarea>
+            <div class="invalid-feedback">Valid first name is required.</div>
+          </div>
+        </div>
+        <br />
+
+        <label class="form-label">Blog İçeriği</label>
+        <br />
+        <div class="input-group">
+          <textarea
+            class="form-control"
+            aria-label="With textarea"
+            formControlName="blogText"
+          ></textarea>
+        </div>
+
+        <br />
+        <button class="w-100 btn btn-primary btn-lg" type="submit">
+          Blogu Kaydet
+        </button>
+      </form>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+  </main>
+</div>

@@ -5,11 +5,13 @@ import { LoginGuard } from './guards/login.guard';
 import { LoginComponent } from './components/login/login.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { AddBlogComponent } from './components/add-blog/add-blog.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate:[LoginGuard] },
   { path: 'about-me', component: AboutMeComponent, canActivate:[LoginGuard] },
   { path: 'contact', component: ContactMeComponent, canActivate:[LoginGuard] },
+  { path: 'add-blog', component: AddBlogComponent, canActivate:[LoginGuard] },
   { path: 'login', component: LoginComponent}
 ];
 
