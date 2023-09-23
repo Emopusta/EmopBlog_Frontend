@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AddBlogComponent } from './components/add-blog/add-blog.component';
+import { BlogCardsComponent } from './components/blog-cards/blog-cards.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AddBlogComponent } from './components/add-blog/add-blog.component';
     FooterComponent,
     LoginComponent,
     HomeComponent,
-    AddBlogComponent
+    AddBlogComponent,
+    BlogCardsComponent
   ],
   imports: [
     BrowserModule,
