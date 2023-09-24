@@ -19,7 +19,6 @@ export class BlogCardsComponent {
     var data = this.blogService.GetDataForHomeCards();
     data.subscribe(data => {data.items.forEach(item => {
       this.data.push(item);
-      console.log(item);
     })});
   }
 }
