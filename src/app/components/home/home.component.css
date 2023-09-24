@@ -1,0 +1,25 @@
+
+.title-image{
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    height: auto;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.big-heading {
+    
+    padding: 60px 50px;
+    font-size: 3.5rem;
+    size: 5rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+#home {
+    padding-top: 13%;
+    padding-bottom: 13%;
+    background-color: #add8e1;
+    align-items: center;
+}

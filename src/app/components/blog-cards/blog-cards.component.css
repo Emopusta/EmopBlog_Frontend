@@ -1,0 +1,14 @@
+
+.card-img-top{
+    height: 12rem;
+    width: 18rem;
+    margin: auto;
+}
+.card-comp{
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.container{
+    margin: auto;
+}
