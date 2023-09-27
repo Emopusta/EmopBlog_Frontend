@@ -12,7 +12,7 @@
           <div class="col-sm-12">
             <label class="form-label">Blog Adı</label>
             <input
-              formControlName="blogName"
+              formControlName="name"
               type="text"
               class="form-control blogName"
               id="blogName"
@@ -34,12 +34,20 @@
               placeholder=""
               value=""
               required=""
-              formControlName="blogDescription"
+              formControlName="description"
             ></textarea>
             <div class="invalid-feedback">Valid first name is required.</div>
           </div>
         </div>
         <br />
+        <label for="blogDescription" class="form-label"
+        >Blog Görseli</label
+      >
+        <div class="input-group mb-3">
+          <input type="file" class="form-control file-input" id="inputGroupFile01" (change)="onImageSelect($event)" />
+          <label class="input-group-text" for="inputGroupFile02">Yükle</label
+          >
+        </div>
 
         <label class="form-label">Blog İçeriği</label>
         <br />
@@ -47,12 +55,12 @@
           <textarea
             class="form-control"
             aria-label="With textarea"
-            formControlName="blogText"
+            formControlName="text"
           ></textarea>
         </div>
 
         <br />
-        <button class="w-100 btn btn-primary btn-lg" type="submit">
+        <button class="w-100 btn btn-primary btn-lg" type="submit" (click)="saveBlog()">
           Blogu Kaydet
         </button>
       </form>
