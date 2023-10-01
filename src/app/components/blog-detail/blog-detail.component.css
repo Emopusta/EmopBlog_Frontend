@@ -1,0 +1,32 @@
+.frame{
+    height: auto;
+    width: auto;
+    background-color: beige;
+    padding: 13%; 
+}
+
+.title{
+    text-align: center;
+}
+.image{
+    width: 100%;
+    max-width: 600px;
+    max-height: 300px;
+    padding-bottom: 30px;
+    
+}
+.image-container{
+    text-align: center;
+}
+.author-container{
+    position: relative;
+    text-align: right;
+    bottom: 2rem;
+}
+
+.text{
+    padding-top: 50px;
+    font-size: large;
+    line-height: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
