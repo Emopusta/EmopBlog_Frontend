@@ -24,10 +24,6 @@ export class LoginComponent{
       })
     }
     
-   
-    
-  
-
   login(){
     
     if(this.loginForm.valid){
