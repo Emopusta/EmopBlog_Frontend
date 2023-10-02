@@ -21,13 +21,22 @@ export class BlogService {
     return this.httpClient.post<BlogPostModel>(this.apiUrl, formData, { headers });
   }
 
-  GetDataForHomeCards(){
+  getDataForHomeCards(){
     return this.httpClient.get<ListResponseModel>(this.apiUrl+ "?PageIndex=0&PageSize=10");
   }
 
   getDataById(id:string){
     
     return this.httpClient.get<BlogDetailModel>(this.apiUrl+ id);
+
   }
+
+  getDataForListing(index:number, size:number){
+
+    return this.httpClient.get<ListResponseModel>(this.apiUrl+ "?PageIndex="+index+"&PageSize="+size);
+
+  }
+
+
 
 }
