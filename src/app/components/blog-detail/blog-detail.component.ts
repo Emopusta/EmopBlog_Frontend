@@ -13,7 +13,7 @@ export class BlogDetailComponent implements OnInit {
   blogId: string = '';
   details:BlogDetailModel[] = [];
   name:string="";
-  text:string="";
+  text:string[]=[];
   description:string="";
   image:string="";
   author:string="";
@@ -29,7 +29,7 @@ export class BlogDetailComponent implements OnInit {
   getBlogDetails(){
     this.blogService.getDataById(this.blogId).subscribe((blog:BlogDetailModel) => {
       this.name = blog.name;
-      this.text = blog.text;
+      this.text = this.splitString(blog.text, 80);
       this.description = blog.description;
       this.image = blog.image;
       this.author = blog.author;
@@ -39,4 +39,12 @@ export class BlogDetailComponent implements OnInit {
   backNavigation(){
     this.location.back();
   }
+
+   splitString(inputString: string, chunkSize: number): string[] {
+    const chunks: string[] = [];
+    for (let i = 0; i < inputString.length; i += chunkSize) {
+        chunks.push(inputString.slice(i, i + chunkSize));
+    }
+    return chunks;
+}
 }

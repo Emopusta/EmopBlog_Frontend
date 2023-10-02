@@ -7,6 +7,7 @@
 
 .title{
     text-align: center;
+    padding-bottom: 20px;
 }
 .image{
     width: 100%;
@@ -25,10 +26,10 @@
 }
 
 .text{
-    padding-top: 50px;
+    text-align: center;
     font-size: large;
-    line-height: 1.5rem;
-    font-family: 'Courier New', Courier, monospace;
+    line-height: 1rem;
+    font-family: 'Times New Roman', Times, serif;
 }
 .back-navigation{
     

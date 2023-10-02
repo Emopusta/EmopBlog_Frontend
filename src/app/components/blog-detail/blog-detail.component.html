@@ -10,7 +10,7 @@
             <img class="image" src="{{image}}" alt="blog-image">
         </div>
         <h3 class="title">{{name}}</h3>
-        <p class="text">{{text}}</p>
+        <p class="text" *ngFor="let item of text">{{item}}</p>
 
     </div>
 

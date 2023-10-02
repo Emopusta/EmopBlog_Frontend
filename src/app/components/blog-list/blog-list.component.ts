@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BlogDetailModel } from 'src/app/models/blog-detail-model';
 import { ListResponseModel } from 'src/app/models/list-response-model';
 import { BlogService } from 'src/app/services/blog.service';
@@ -19,7 +20,7 @@ export class BlogListComponent implements OnInit {
   count: number = 0;
   pages: number = 0;
   
-  constructor(private blogService:BlogService){
+  constructor(private blogService:BlogService, private route:Router){
 
   }
 
@@ -30,7 +31,7 @@ export class BlogListComponent implements OnInit {
       this.hasNext = response.hasNext;
       this.pages = response.pages;
       response.items.forEach(blog => {
-        this.blogs.push(blog["name"]);
+        this.blogs.push(blog);
       });
       
       for (let i = 0; i < this.pages; i++) {
@@ -39,6 +40,11 @@ export class BlogListComponent implements OnInit {
       });
       
       console.log(this.blogs);
+  }
+
+  clickListItem(index:number){
+    var path = "blog-detail/"+this.blogs[index]["id"];
+    this.route.navigate([path]);
   }
   
   nextButton(){
