@@ -7,6 +7,7 @@ import { ContactMeComponent } from './components/contact-me/contact-me.component
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { AddBlogComponent } from './components/add-blog/add-blog.component';
 import { BlogDetailComponent } from './components/blog-detail/blog-detail.component';
+import { BlogListComponent } from './components/blog-list/blog-list.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate:[LoginGuard] },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactMeComponent, canActivate:[LoginGuard] },
   { path: 'add-blog', component: AddBlogComponent, canActivate:[LoginGuard] },
   { path: 'blog-detail/:id', component: BlogDetailComponent},
+  { path: 'blog-list', component: BlogListComponent},
   { path: 'login', component: LoginComponent}
 ];
 
